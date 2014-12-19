@@ -1,0 +1,15 @@
+{
+  "name": "date-fns",
+  "version": "0.1.0",
+  "homepage": "https://github.com/js-fns/sniff-fns",
+  "authors": [
+    "Ivan Shornikov <paraboom@gmail.com>"
+  ],
+  "description": "Browser agent sniffing functions",
+  "main": "dist/sniff_fns.js",
+  "license": "MIT",
+  "ignore": [
+    "src",
+    "node_modules"
+  ]
+}
