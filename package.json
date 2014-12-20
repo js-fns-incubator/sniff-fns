@@ -16,7 +16,7 @@
     "webpack": "^1.4.4"
   },
   "scripts": {
-    "karmak": "karmak --webpack-config ./config/webpack.js --karma-config ./config/karma.js",
+    "karmak": "karmak --webpack-config ./config/webpack.js --karma-config ./config/karma.js --pattern '**/*/_test_helper.js' --pattern '**/*_test.js*'  --pattern '!node_modules/**/*' --pattern '!tmp'",
     "test": "npm run-script karmak -- --single-run",
     "autotest": "npm run-script karmak",
     "build": "webpack --config ./config/webpack.js"

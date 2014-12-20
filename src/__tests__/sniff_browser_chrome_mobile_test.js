@@ -7,11 +7,7 @@ describe('sniffChromeMobile', function(){
       'Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3'
     ];
 
-    var result = ChromeMobileUserAgents.map(function(userAgent){
-      return sniffChromeMobile(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.true;
+    expect(isArrayPassFunction(ChromeMobileUserAgents, sniffChromeMobile)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to chrome\'s user agent', function(){
@@ -21,10 +17,6 @@ describe('sniffChromeMobile', function(){
       'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36'
     ];
 
-    var result = NotChromeMobileUserAgents.map(function(userAgent){
-      return sniffChromeMobile(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.false;
+    expect(isArrayPassFunction(NotChromeMobileUserAgents, sniffChromeMobile)).to.be.false;
   });
 });

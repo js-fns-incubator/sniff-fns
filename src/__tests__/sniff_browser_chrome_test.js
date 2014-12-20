@@ -8,23 +8,15 @@ describe('sniffChrome', function(){
       'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36'
     ];
 
-    var result = ChromeUserAgents.map(function(userAgent){
-      return sniffChrome(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.true;
+    expect(isArrayPassFunction(ChromeUserAgents, sniffChrome)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to chrome\'s user agent', function(){
-    var ChromeUserAgents = [
+    var NotChromeUserAgents = [
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; ARM; Touch; WPDesktop)',
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko',
     ];
 
-    var result = ChromeUserAgents.map(function(userAgent){
-      return sniffChrome(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.false;
+    expect(isArrayPassFunction(NotChromeUserAgents, sniffChrome)).to.be.false;
   });
 });

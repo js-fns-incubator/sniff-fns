@@ -8,11 +8,7 @@ describe('sniffOpera', function(){
       'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100'
     ];
 
-    var result = OperaUserAgents.map(function(userAgent){
-      return sniffOpera(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.true;
+    expect(isArrayPassFunction(OperaUserAgents, sniffOpera)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to opera\'s user agent', function(){
@@ -21,10 +17,6 @@ describe('sniffOpera', function(){
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko',
     ];
 
-    var result = NotOperaUserAgents.map(function(userAgent){
-      return sniffOpera(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.false;
+    expect(isArrayPassFunction(NotOperaUserAgents, sniffOpera)).to.be.false;
   });
 });

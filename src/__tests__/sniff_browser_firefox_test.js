@@ -10,11 +10,7 @@ describe('sniffFirefox', function(){
       'Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0'
     ];
 
-    var result = FirefoxUserAgents.map(function(userAgent){
-      return sniffFF(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.true;
+    expect(isArrayPassFunction(FirefoxUserAgents, sniffFF)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to firefox\'s user agent', function(){
@@ -23,10 +19,6 @@ describe('sniffFirefox', function(){
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko',
     ];
 
-    var result = NotFirefoxUserAgents.map(function(userAgent){
-      return sniffFF(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.false;
+    expect(isArrayPassFunction(NotFirefoxUserAgents, sniffFF)).to.be.false;
   });
 });

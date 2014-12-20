@@ -8,15 +8,11 @@ describe('sniffWindowsPhone', function(){
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko'
     ];
 
-    var result = WPUserAgents.map(function(userAgent){
-      return sniffWP(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.true;
+    expect(isArrayPassFunction(WPUserAgents, sniffWP)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to windows phone\'s user agent', function(){
-    var WPUserAgents = [
+    var NotWPUserAgents = [
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Xbox; Xbox One)',
       'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)',
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; ARM; Touch; WPDesktop)',
@@ -25,10 +21,6 @@ describe('sniffWindowsPhone', function(){
       'Mozilla/5.0 (Linux; U; Android 2.3.3; zh-tw; HTC_Pyramid Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari'
     ];
 
-    var result = WPUserAgents.map(function(userAgent){
-      return sniffWP(userAgent);
-    }).every(Boolean);
-
-    expect(result).to.be.false;
+    expect(isArrayPassFunction(NotWPUserAgents, sniffWP)).to.be.false;
   });
 });
