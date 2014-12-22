@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define(factory);
+	else if(typeof exports === 'object')
+		exports["sniffFns"] = factory();
+	else
+		root["sniffFns"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -44,7 +54,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(module) {var isChrome = __webpack_require__(1);
+	var isChrome = __webpack_require__(1);
 	var isChromeMobile = __webpack_require__(2);
 	var isAndroid = __webpack_require__(3);
 	var isAndroidMobile = __webpack_require__(4);
@@ -76,13 +86,8 @@
 	    mobile: isMobile
 	}
 
-	if (module && module.exports) {
-	  module.exports = sniffFns;
-	} else {
-	  window.dateFns = sniffFns;
-	}
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+	module.exports = sniffFns;
+
 
 /***/ },
 /* 1 */
@@ -292,21 +297,6 @@
 	module.exports = testString;
 
 
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = function(module) {
-		if(!module.webpackPolyfill) {
-			module.deprecate = function() {};
-			module.paths = [];
-			// module.parent = undefined by default
-			module.children = [];
-			module.webpackPolyfill = 1;
-		}
-		return module;
-	}
-
-
 /***/ }
 /******/ ])
+});

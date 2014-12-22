@@ -30,8 +30,4 @@ var sniffFns = {
     mobile: isMobile
 }
 
-if (module && module.exports) {
-  module.exports = sniffFns;
-} else {
-  window.dateFns = sniffFns;
-}
+module.exports = sniffFns;
