@@ -1,4 +1,4 @@
-var sniffBB = require('../sniff_browser_blackberry');
+var sniffBB = require('../sniff_blackberry');
 
 describe('sniffBlackberry', function(){
   it('returns true if string belongs to mobile blackberry\'s user agent', function(){

@@ -1,34 +1,39 @@
-// # TODO: Find a better place for it
-// window.sniffedInformation = do ->
-//   userAgent = navigator.userAgent.toLowerCase()
-//   testUserAgent = (str) -> RegExp(str.toLowerCase()).test(userAgent)
+var isChrome = require('./sniff_browser_chrome');
+var isChromeMobile = require('./sniff_browser_chrome_mobile');
+var isAndroid = require('./sniff_android');
+var isAndroidMobile = require('./sniff_android_mobile');
+var isBB = require('./sniff_blackberry');
+var isFF = require('./sniff_browser_firefox');
+var isOpera = require('./sniff_browser_opera');
+var isSafari = require('./sniff_browser_safari');
+var isIphone = require('./sniff_iphone');
+var isIpad = require('./sniff_ipad');
+var isMac = require('./sniff_mac');
+var isWP = require('./sniff_windows_phone');
+var isMobile = require('./sniff_mobile');
 
-//   android = if testUserAgent('android')
-//     parseFloat(userAgent.replace(/^.* android (\d+)\.(\d+).*$/, "$1.$2")) or true
-//   else
-//     false
-//   mobileAndroid = android and testUserAgent('mobile')
+var sniffFns = {
+  return {
+    android: isAndroid,
+    mobileAndroid: isAndroidMobile,
+    bb10: isBB,
+    browser: {
+      chrome: isChrome,
+      chromeMobile: isChromeMobile,
+      firefox: isFF,
+      opera: isOpera,
+      safari: isSafari
+    },
+    iPhone: isIphone,
+    iPad: isIpad,
+    mac: isMac
+    windowsPhone: isWP
+    mobile: isMobile
+  }
+}
 
-//   windowsPhone = if testUserAgent('windows phone') or testUserAgent('iemobile')
-//     parseFloat(userAgent.replace(/^.* windows phone (os )?(\d+)\.(\d+).*$/, "$2.$3")) or true
-//   else
-//     false
-
-//   isChrome = testUserAgent('chrome')
-//   isBb10 = testUserAgent('bb10')
-//   isIPhone = testUserAgent('iphone;') or testUserAgent('ipod touch;')
-
-//   android: android
-//   mobileAndroid: mobileAndroid
-//   browser:
-//     bb10: isBb10
-//     chrome: isChrome
-//     firefox: testUserAgent('firefox')
-//     opera: testUserAgent('opera')
-//     safari: testUserAgent('safari') and testUserAgent('apple') and not isChrome and not testUserAgent('android')
-//   iPhone: isIPhone
-//   iPad: testUserAgent('ipad;')
-//   mac: testUserAgent('mac os')
-//   windowsPhone: windowsPhone
-//   mobile: mobileAndroid or isIPhone or windowsPhone or isBb10
-return true;
+if (module && module.exports) {
+  module.exports = sniffFns;
+} else {
+  window.dateFns = sniffFns;
+}
