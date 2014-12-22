@@ -1,6 +1,6 @@
-var sniffFF = require('../sniff_browser_firefox');
+var isFF = require('../is_browser_firefox');
 
-describe('sniffFirefox', function(){
+describe('isFirefox', function(){
   it('returns true if string belongs to firefox\'s user agent', function(){
     var FirefoxUserAgents = [
       'Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0',
@@ -10,7 +10,7 @@ describe('sniffFirefox', function(){
       'Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0'
     ];
 
-    expect(isArrayPassFunction(FirefoxUserAgents, sniffFF)).to.be.true;
+    expect(isArrayPassFunction(FirefoxUserAgents, isFF)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to firefox\'s user agent', function(){
@@ -19,6 +19,6 @@ describe('sniffFirefox', function(){
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko',
     ];
 
-    expect(isArrayPassFunction(NotFirefoxUserAgents, sniffFF)).to.be.false;
+    expect(isArrayPassFunction(NotFirefoxUserAgents, isFF)).to.be.false;
   });
 });

@@ -1,6 +1,6 @@
-var sniffAndroid = require('../sniff_android');
+var isAndroid = require('../is_android');
 
-describe('sniffAndroid', function(){
+describe('isAndroid', function(){
   it('returns true if string belongs to android\'s user agent', function(){
     var androidUserAgents = [
       'Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
@@ -28,12 +28,12 @@ describe('sniffAndroid', function(){
       'Mozilla/5.0 (Linux; U; Android 1.6; ar-us; SonyEricssonX10i Build/R2BA026) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1'
     ];
 
-    expect(isArrayPassFunction(androidUserAgents, sniffAndroid)).to.be.true;
+    expect(isArrayPassFunction(androidUserAgents, isAndroid)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to android\'s user agent', function(){
     var target = 'Test string lalalala other stuff';
 
-    expect(isArrayPassFunction(target, sniffAndroid)).to.be.false;
+    expect(isArrayPassFunction(target, isAndroid)).to.be.false;
   });
 });

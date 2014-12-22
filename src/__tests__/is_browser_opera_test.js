@@ -1,6 +1,6 @@
-var sniffOpera = require('../sniff_browser_opera');
+var isOpera = require('../is_browser_opera');
 
-describe('sniffOpera', function(){
+describe('isOpera', function(){
   it('returns true if string belongs to opera\'s user agent', function(){
     var OperaUserAgents = [
       'Opera/9.80 (Android; Opera Mini/7.5.33361/31.1448; U; en) Presto/2.8.119 Version/11.1010',
@@ -8,7 +8,7 @@ describe('sniffOpera', function(){
       'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100'
     ];
 
-    expect(isArrayPassFunction(OperaUserAgents, sniffOpera)).to.be.true;
+    expect(isArrayPassFunction(OperaUserAgents, isOpera)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to opera\'s user agent', function(){
@@ -17,6 +17,6 @@ describe('sniffOpera', function(){
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko',
     ];
 
-    expect(isArrayPassFunction(NotOperaUserAgents, sniffOpera)).to.be.false;
+    expect(isArrayPassFunction(NotOperaUserAgents, isOpera)).to.be.false;
   });
 });

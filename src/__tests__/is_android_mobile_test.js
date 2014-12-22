@@ -1,6 +1,6 @@
-var sniffAndroidMobile = require('../sniff_android_mobile');
+var isAndroidMobile = require('../is_android_mobile');
 
-describe('sniffAndroidMobile', function(){
+describe('isAndroidMobile', function(){
   it('returns true if string belongs to mobile android\'s user agent', function(){
     var androidMobileUserAgents = [
       'Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
@@ -27,7 +27,7 @@ describe('sniffAndroidMobile', function(){
       'Mozilla/5.0 (Linux; U; Android 1.6; ar-us; SonyEricssonX10i Build/R2BA026) AppleWebKit/528.5+ (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1'
     ];
 
-    expect(isArrayPassFunction(androidMobileUserAgents, sniffAndroidMobile)).to.be.true;
+    expect(isArrayPassFunction(androidMobileUserAgents, isAndroidMobile)).to.be.true;
   });
 
   it('returns false if string doesn\'t belongs to mobile android\'s user agent', function(){
@@ -35,6 +35,6 @@ describe('sniffAndroidMobile', function(){
       'Mozilla/5.0 (Linux; U; Android 2.3; en-us) AppleWebKit/999+ (KHTML, like Gecko) Safari/999.9'
     ];
 
-    expect(isArrayPassFunction(notAndroidMobileUserAgents, sniffAndroidMobile)).to.be.false;
+    expect(isArrayPassFunction(notAndroidMobileUserAgents, isAndroidMobile)).to.be.false;
   });
 });

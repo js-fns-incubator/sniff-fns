@@ -1,13 +1,13 @@
-var sniffIpad = require('../sniff_ipad');
+var isIpad = require('../is_ipad');
 
-describe('sniffIpad', function(){
+describe('isIpad', function(){
   it('returns true if device is iPad', function(){
     var IpadUserAgents = [
       'Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10',
       'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53'
     ];
 
-    expect(isArrayPassFunction(IpadUserAgents, sniffIpad)).to.be.true;
+    expect(isArrayPassFunction(IpadUserAgents, isIpad)).to.be.true;
   });
 
   it('returns false if device is not an iPad', function(){
@@ -19,6 +19,6 @@ describe('sniffIpad', function(){
       'Mozilla/5.0 (iPod touch; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B511 Safari/9537.53'
     ];
 
-    expect(isArrayPassFunction(NotIpadUserAgents, sniffIpad)).to.be.false;
+    expect(isArrayPassFunction(NotIpadUserAgents, isIpad)).to.be.false;
   });
 });

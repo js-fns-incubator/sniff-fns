@@ -1,6 +1,6 @@
-var sniffMac = require('../sniff_mac');
+var isMac = require('../is_mac');
 
-describe('sniffMac', function(){
+describe('isMac', function(){
   it('returns true if device using Mac Os X', function(){
     var MacUserAgents = [
       'Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10',
@@ -10,7 +10,7 @@ describe('sniffMac', function(){
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.27 Safari/536.11'
     ];
 
-    expect(isArrayPassFunction(MacUserAgents, sniffMac)).to.be.true;
+    expect(isArrayPassFunction(MacUserAgents, isMac)).to.be.true;
   });
 
   it('returns false if device is not using Mac Os X', function(){
@@ -20,6 +20,6 @@ describe('sniffMac', function(){
       'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1C25 Safari/419.3',
     ];
 
-    expect(isArrayPassFunction(NotMacUserAgents, sniffMac)).to.be.false;
+    expect(isArrayPassFunction(NotMacUserAgents, isMac)).to.be.false;
   });
 });

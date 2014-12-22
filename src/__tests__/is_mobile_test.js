@@ -1,6 +1,6 @@
-var sniffMobile = require('../sniff_mobile');
+var isMobile = require('../is_mobile');
 
-describe('sniffMobile', function(){
+describe('isMobile', function(){
   it('returns true if device is mobile', function(){
     var MobileUserAgents = [
       'Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
@@ -11,7 +11,7 @@ describe('sniffMobile', function(){
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko'
     ];
 
-    expect(isArrayPassFunction(MobileUserAgents, sniffMobile)).to.be.true;
+    expect(isArrayPassFunction(MobileUserAgents, isMobile)).to.be.true;
   });
 
   it('returns false if device is not mobile', function(){
@@ -23,6 +23,6 @@ describe('sniffMobile', function(){
       'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36'
     ];
 
-    expect(isArrayPassFunction(NotMobileUserAgents, sniffMobile)).to.be.false;
+    expect(isArrayPassFunction(NotMobileUserAgents, isMobile)).to.be.false;
   });
 });
