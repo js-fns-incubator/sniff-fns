@@ -13,7 +13,6 @@ var isWP = require('./sniff_windows_phone');
 var isMobile = require('./sniff_mobile');
 
 var sniffFns = {
-  return {
     android: isAndroid,
     mobileAndroid: isAndroidMobile,
     bb10: isBB,
@@ -26,10 +25,9 @@ var sniffFns = {
     },
     iPhone: isIphone,
     iPad: isIpad,
-    mac: isMac
-    windowsPhone: isWP
+    mac: isMac,
+    windowsPhone: isWP,
     mobile: isMobile
-  }
 }
 
 if (module && module.exports) {
