@@ -2,7 +2,7 @@ var sniffFns = require('../sniff_fns');
 
 describe('bundle sniffFns', function(){
   it('returns object with functions', function(){
-    var keys = ["android", "mobileAndroid", "bb10", "browser", "iPhone", "iPad", "mac", "windowsPhone", "mobile"];
+    var keys = ["isAndroid", "isMobileAndroid", "isBb10", "browser", "isIphone", "isIpad", "isMac", "isWindowsPhone", "isMobile"];
 
     expect(Object.keys(sniffFns)).is.eql(keys);
   });

@@ -13,21 +13,21 @@ var isWP = require('./is_windows_phone');
 var isMobile = require('./is_mobile');
 
 var sniffFns = {
-    android: isAndroid,
-    mobileAndroid: isAndroidMobile,
-    bb10: isBB,
+    isAndroid: isAndroid,
+    isMobileAndroid: isAndroidMobile,
+    isBb10: isBB,
     browser: {
-      chrome: isChrome,
-      chromeMobile: isChromeMobile,
-      firefox: isFF,
-      opera: isOpera,
-      safari: isSafari
+      isChrome: isChrome,
+      isChromeMobile: isChromeMobile,
+      isFirefox: isFF,
+      isOpera: isOpera,
+      isSafari: isSafari
     },
-    iPhone: isIphone,
-    iPad: isIpad,
-    mac: isMac,
-    windowsPhone: isWP,
-    mobile: isMobile
+    isIphone: isIphone,
+    isIpad: isIpad,
+    isMac: isMac,
+    isWindowsPhone: isWP,
+    isMobile: isMobile
 }
 
 module.exports = sniffFns;
