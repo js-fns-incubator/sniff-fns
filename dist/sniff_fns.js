@@ -69,21 +69,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	var isMobile = __webpack_require__(13);
 
 	var sniffFns = {
-	    android: isAndroid,
-	    mobileAndroid: isAndroidMobile,
-	    bb10: isBB,
+	    isAndroid: isAndroid,
+	    isMobileAndroid: isAndroidMobile,
+	    isBb10: isBB,
 	    browser: {
-	      chrome: isChrome,
-	      chromeMobile: isChromeMobile,
-	      firefox: isFF,
-	      opera: isOpera,
-	      safari: isSafari
+	      isChrome: isChrome,
+	      isChromeMobile: isChromeMobile,
+	      isFirefox: isFF,
+	      isOpera: isOpera,
+	      isSafari: isSafari
 	    },
-	    iPhone: isIphone,
-	    iPad: isIpad,
-	    mac: isMac,
-	    windowsPhone: isWP,
-	    mobile: isMobile
+	    isIphone: isIphone,
+	    isIpad: isIpad,
+	    isMac: isMac,
+	    isWindowsPhone: isWP,
+	    isMobile: isMobile
 	}
 
 	module.exports = sniffFns;
@@ -107,11 +107,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var testString = __webpack_require__(14);
-	var sniffChrome = __webpack_require__(1);
-	var sniffAndroid = __webpack_require__(3);
+	var isChrome = __webpack_require__(1);
+	var isAndroid = __webpack_require__(3);
 
 	var isChromeMobile = function(str){
-	  return (sniffChrome(str) && sniffAndroid(str)) || testString(str, 'CriOS');
+	  return (isChrome(str) && isAndroid(str)) || testString(str, 'CriOS');
 	}
 
 	module.exports = isChromeMobile;
@@ -141,11 +141,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var testString = __webpack_require__(14);
 	var sniffAndroid = __webpack_require__(3);
 
-	var isMobileAndroid = function(str){
+	var isAndroidMobile = function(str){
 	  return sniffAndroid(str) && testString(str, 'mobile');
 	}
 
-	module.exports = isMobileAndroid;
+	module.exports = isAndroidMobile;
 
 
 /***/ },
