@@ -1,6 +1,6 @@
 {
   "name": "date-fns",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/js-fns/sniff-fns",
   "authors": [
     "Ivan Shornikov <paraboom@gmail.com>"
