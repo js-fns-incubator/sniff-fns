@@ -274,7 +274,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var isBB = __webpack_require__(5);
 
 	var isMobile = function(str){
-	  return isAndroidMobile(str) || isIphone(str) || isIpad(str) || isWP(str) || isBB(str);
+	  return isAndroidMobile(str) || isIphone(str) || isWP(str) || isBB(str);
 	};
 
 	module.exports = isMobile;

@@ -6,7 +6,7 @@ var isWP = require('./is_windows_phone.js');
 var isBB = require('./is_blackberry');
 
 var isMobile = function(str){
-  return isAndroidMobile(str) || isIphone(str) || isIpad(str) || isWP(str) || isBB(str);
+  return isAndroidMobile(str) || isIphone(str) || isWP(str) || isBB(str);
 };
 
 module.exports = isMobile;
