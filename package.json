@@ -9,16 +9,16 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "karma-chai-sinon": "^0.1.3",
-    "karma-mocha": "^0.1.9",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "karmak": "^0.2.1",
-    "webpack": "^1.4.4"
+    "karma": "^0.13.9",
+    "karma-chai-sinon": "^0.1.5",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-webpack": "^1.7.0",
+    "webpack": "^1.12.0"
   },
   "scripts": {
-    "karmak": "karmak --webpack-config ./config/webpack.js --karma-config ./config/karma.js --pattern '**/*/_test_helper.js' --pattern '**/*_test.js*'  --pattern '!node_modules/**/*' --pattern '!tmp'",
-    "test": "npm run-script karmak -- --single-run",
-    "autotest": "npm run-script karmak",
+    "test": "env NODE_ENV=test karma start ./config/karma.js",
     "build": "webpack --config ./config/webpack.js"
   }
 }
