@@ -1,16 +1,22 @@
+// Browsers
 var isChrome = require('./is_browser_chrome');
 var isChromeMobile = require('./is_browser_chrome_mobile');
-var isAndroid = require('./is_android');
-var isAndroidMobile = require('./is_android_mobile');
-var isBB = require('./is_blackberry');
 var isFF = require('./is_browser_firefox');
 var isOpera = require('./is_browser_opera');
 var isSafari = require('./is_browser_safari');
+var whichBrowser = require('./which_browser');
+
+// OSes
+var isAndroid = require('./is_android');
+var isAndroidMobile = require('./is_android_mobile');
+var isBB = require('./is_blackberry');
 var isIphone = require('./is_iphone');
 var isIpad = require('./is_ipad');
 var isMac = require('./is_mac');
+var isWindows = require('./is_windows');
 var isWP = require('./is_windows_phone');
 var isMobile = require('./is_mobile');
+var whichOs = require('./which_os');
 
 var sniffFns = {
     isAndroid: isAndroid,
@@ -21,13 +27,16 @@ var sniffFns = {
       isChromeMobile: isChromeMobile,
       isFirefox: isFF,
       isOpera: isOpera,
-      isSafari: isSafari
+      isSafari: isSafari,
+      whichBrowser: whichBrowser
     },
     isIphone: isIphone,
     isIpad: isIpad,
     isMac: isMac,
+    isWindows: isWindows,
     isWindowsPhone: isWP,
-    isMobile: isMobile
+    isMobile: isMobile,
+    whichOs: whichOs
 }
 
 module.exports = sniffFns;

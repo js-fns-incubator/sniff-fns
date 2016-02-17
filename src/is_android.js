@@ -1,11 +1,7 @@
-var testString = require('./test_string')
+var testString = require('./test_string');
 
-var isAndroid = function(str){
-  if (testString(str, 'android')) {
-    return parseFloat(str.replace(/^.* android (\d+)\.(\d+).*$/, "$1.$2")) || true
-  } else {
-    return false
-  }
+var isAndroid = function (str) {
+  return testString(str, '; android');
 };
 
 module.exports = isAndroid;
