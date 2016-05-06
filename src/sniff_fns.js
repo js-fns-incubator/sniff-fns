@@ -6,6 +6,7 @@ var isOpera = require('./is_browser_opera');
 var isSafari = require('./is_browser_safari');
 var isIE = require('./is_browser_ie');
 var whichBrowser = require('./which_browser');
+var whichBrowserVersion = require('./which_browser_version');
 
 // OSes
 var isAndroid = require('./is_android');
@@ -30,7 +31,8 @@ var sniffFns = {
       isOpera: isOpera,
       isSafari: isSafari,
       isIE: isIE,
-      whichBrowser: whichBrowser
+      whichBrowser: whichBrowser,
+      whichBrowserVersion: whichBrowserVersion
     },
     isIphone: isIphone,
     isIpad: isIpad,

@@ -11,6 +11,11 @@ describe('isChrome', function(){
     });
   });
 
+  it("returns true if it's Chromium's user agent", function() {
+    expect(isChrome('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/11.10 Chromium/18.0.1025.142 Chrome/18.0.1025.142 Safari/535.19'))
+      .to.be.true
+  })
+
   it('returns false if string doesn\'t belongs to chrome\'s user agent', function(){
     var NotChromeUserAgents = [
       'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; ARM; Touch; WPDesktop)',
