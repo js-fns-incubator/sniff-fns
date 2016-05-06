@@ -1,4 +1,4 @@
-## Unreleased
+## v0.4.0 (6 May 2016)
 
 - Add `isIE` function
 - Add `whichBrowserVersion` function which supports Chrome, Mobile Chrome,
