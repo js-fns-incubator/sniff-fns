@@ -3,6 +3,7 @@ var isChromeMobile = require('./is_browser_chrome_mobile');
 var isFF = require('./is_browser_firefox');
 var isOpera = require('./is_browser_opera');
 var isSafari = require('./is_browser_safari');
+var isIE = require('./is_browser_ie');
 
 var whichBrowser = function (str) {
   if (isOpera(str)) {
@@ -15,6 +16,8 @@ var whichBrowser = function (str) {
     return 'firefox'
   } else if (isSafari(str)) {
     return 'safari'
+  } else if (isIE(str)) {
+    return 'ie'
   } else {
     return 'unknown browser'
   }
