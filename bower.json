@@ -1,15 +1,10 @@
 {
   "name": "sniff-fns",
-  "version": "0.4.0",
+  "version": "0.5.0-rc2",
   "homepage": "https://github.com/js-fns/sniff-fns",
-  "authors": [
-    "Ivan Shornikov <paraboom@gmail.com>"
-  ],
+  "authors": ["Ivan Shornikov <paraboom@gmail.com>"],
   "description": "Browser agent sniffing functions",
   "main": "dist/sniff_fns.js",
   "license": "MIT",
-  "ignore": [
-    "src",
-    "node_modules"
-  ]
+  "ignore": ["src", "node_modules"]
 }
