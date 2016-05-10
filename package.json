@@ -24,7 +24,8 @@
     "test-coverage-coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard --verbose | snazzy",
     "build": "webpack --config ./config/webpack.js",
-    "build-binded-fns": "node scripts/build_binded_fns"
+    "build-index": "node scripts/build_index",
+    "build-binded": "node scripts/build_binded"
   },
   "standard": {
     "ignore": [

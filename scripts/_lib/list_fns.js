@@ -6,10 +6,12 @@ module.exports = function listFns () {
   return files
     .filter((file) => !file.startsWith('.'))
     .map((file) => {
+      const unbindedPath = `./src/unbinded/${file}/index.js`
+      const bindedPath = unbindedPath.replace('unbinded', 'binded')
       return {
         name: camelize(file),
-        //path: `./binded/${file}`,
-        fullPath: `./src/unbinded/${file}/index.js`
+        bindedPath,
+        unbindedPath
       }
     })
 }
