@@ -11,12 +11,6 @@
   "devDependencies": {
     "ava": "^0.14.0",
     "coveralls": "^2.11.9",
-    "karma": "^0.13.9",
-    "karma-chai-sinon": "^0.1.5",
-    "karma-mocha": "^0.2.0",
-    "karma-mocha-reporter": "^1.1.1",
-    "karma-phantomjs-launcher": "^0.2.1",
-    "karma-webpack": "^1.7.0",
     "nyc": "^6.4.4",
     "snazzy": "^4.0.0",
     "standard": "^7.0.1",
