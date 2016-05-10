@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    'sniff_fns': './src/sniff_fns.js'
+    'sniff_fns': path.join(process.cwd(), 'index.js')
   },
   output: {
     path: path.join(process.cwd(), 'dist'),
