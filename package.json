@@ -10,6 +10,7 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.14.0",
+    "coveralls": "^2.11.9",
     "karma": "^0.13.9",
     "karma-chai-sinon": "^0.1.5",
     "karma-mocha": "^0.2.0",
@@ -24,11 +25,15 @@
   "scripts": {
     "test": "nyc ava test.js src/**/test.js",
     "test-watch": "npm test -- --watch",
+    "test-coverage-report": "nyc report --reporter=html",
+    "test-coverage-coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard --verbose | snazzy",
     "build": "webpack --config ./config/webpack.js",
     "generate-index": "node scripts/generate_index"
   },
   "standard": {
-    "ignore": ["dist/**"]
+    "ignore": [
+      "dist/**"
+    ]
   }
 }

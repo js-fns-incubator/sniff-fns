@@ -1,9 +1,15 @@
+sudo: false
 language: node_js
 node_js:
-  - '0.11'
+  - 4.4
+
 script:
-  - npm test -- --single-run
+  - npm run lint
+  - npm run test
+
 cache:
   directories:
     - node_modules
 
+after_success:
+  - npm run test-coverage-coveralls
