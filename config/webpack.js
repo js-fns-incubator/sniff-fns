@@ -1,18 +1,13 @@
-var path = require('path');
-var isTest = process.env.NODE_ENV == 'test';
+const path = require('path')
 
-var config = {
-  cache: true,
-  entry: isTest ? {} : {
-    'sniff_fns': './src/sniff_fns.js'
+module.exports = {
+  entry: {
+    'sniff_fns': path.join(process.cwd(), 'index.js')
   },
-  output: isTest ? {path: '/'} : {
+  output: {
     path: path.join(process.cwd(), 'dist'),
     filename: '[name].js',
     library: 'sniffFns',
     libraryTarget: 'umd'
   }
-};
-
-module.exports = config;
-
+}
