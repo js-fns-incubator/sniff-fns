@@ -18,7 +18,7 @@ npm run build-npm-package
 
 git add .
 git commit -m "Prepare release v$1"
-git tag -a "v$"1 -m "Release v$1"
+git tag -a "v$1" -m "Release v$1"
 git push
 git push --tags
 
