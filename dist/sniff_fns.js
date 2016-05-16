@@ -131,7 +131,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isAndroid = __webpack_require__(2)
+	var isAndroid = __webpack_require__(2)
 
 	module.exports = function isAndroidMobile (str) {
 	  return isAndroid(str) && /mobile/i.test(str)
@@ -169,7 +169,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isEdge = __webpack_require__(9)
+	var isEdge = __webpack_require__(9)
 
 	module.exports = function isChrome (str) {
 	  return /chrome/i.test(str) && !isEdge(str)
@@ -198,8 +198,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isChrome = __webpack_require__(8)
-	const isAndroid = __webpack_require__(2)
+	var isChrome = __webpack_require__(8)
+	var isAndroid = __webpack_require__(2)
 
 	module.exports = function isChromeMobile (str) {
 	  return isChrome(str) && isAndroid(str) || /CriOS/i.test(str)
@@ -301,7 +301,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isAndroid = __webpack_require__(2)
+	var isAndroid = __webpack_require__(2)
 
 	module.exports = function isLinux (str) {
 	  return /linux/i.test(str) && !isAndroid(str)
@@ -339,10 +339,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isAndroidMobile = __webpack_require__(4)
-	const isIphone = __webpack_require__(20)
-	const isWindowsPhone = __webpack_require__(27)
-	const isBlackberry = __webpack_require__(6)
+	var isAndroidMobile = __webpack_require__(4)
+	var isIphone = __webpack_require__(20)
+	var isWindowsPhone = __webpack_require__(27)
+	var isBlackberry = __webpack_require__(6)
 
 	module.exports = function isMobile (str) {
 	  return isAndroidMobile(str) ||
@@ -392,8 +392,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isChrome = __webpack_require__(8)
-	const isAndroid = __webpack_require__(2)
+	var isChrome = __webpack_require__(8)
+	var isAndroid = __webpack_require__(2)
 
 	module.exports = function isSafari (str) {
 	  return /safari/i.test(str) &&
@@ -416,7 +416,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isWindowsPhone = __webpack_require__(27)
+	var isWindowsPhone = __webpack_require__(27)
 
 	module.exports = function isWindows (str) {
 	  return /windows/i.test(str) && !isWindowsPhone(str)
@@ -445,12 +445,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isChrome = __webpack_require__(8)
-	const isChromeMobile = __webpack_require__(11)
-	const isFF = __webpack_require__(14)
-	const isOpera = __webpack_require__(29)
-	const isSafari = __webpack_require__(31)
-	const isIE = __webpack_require__(16)
+	var isChrome = __webpack_require__(8)
+	var isChromeMobile = __webpack_require__(11)
+	var isFF = __webpack_require__(14)
+	var isOpera = __webpack_require__(29)
+	var isSafari = __webpack_require__(31)
+	var isIE = __webpack_require__(16)
 
 	module.exports = function whichBrowser (str) {
 	  if (isOpera(str)) {
@@ -484,7 +484,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const whichBrowser = __webpack_require__(36)
+	var whichBrowser = __webpack_require__(36)
 
 	module.exports = function whichBrowserVersion (str) {
 	  var capturedVersion
@@ -545,12 +545,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const isAndroid = __webpack_require__(2)
-	const isBlackberry = __webpack_require__(6)
-	const isIphone = __webpack_require__(20)
-	const isMac = __webpack_require__(24)
-	const isWindows = __webpack_require__(33)
-	const isWindowsPhone = __webpack_require__(27)
+	var isAndroid = __webpack_require__(2)
+	var isBlackberry = __webpack_require__(6)
+	var isIphone = __webpack_require__(20)
+	var isMac = __webpack_require__(24)
+	var isWindows = __webpack_require__(33)
+	var isWindowsPhone = __webpack_require__(27)
 
 	module.exports = function whichOS (str) {
 	  if (isAndroid(str)) {
