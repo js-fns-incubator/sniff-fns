@@ -8,7 +8,7 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [Semantic Versioning]: http://semver.org/
 [Keep a CHANGELOG]: http://keepachangelog.com/
 
-## [0.5.1] - 2016-05-16
+## [0.5.2] - 2016-05-16
 
 ### Fixed
 
