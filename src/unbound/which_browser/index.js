@@ -1,9 +1,9 @@
-const isChrome = require('../is_chrome')
-const isChromeMobile = require('../is_chrome_mobile')
-const isFF = require('../is_firefox')
-const isOpera = require('../is_opera')
-const isSafari = require('../is_safari')
-const isIE = require('../is_ie')
+var isChrome = require('../is_chrome')
+var isChromeMobile = require('../is_chrome_mobile')
+var isFF = require('../is_firefox')
+var isOpera = require('../is_opera')
+var isSafari = require('../is_safari')
+var isIE = require('../is_ie')
 
 module.exports = function whichBrowser (str) {
   if (isOpera(str)) {

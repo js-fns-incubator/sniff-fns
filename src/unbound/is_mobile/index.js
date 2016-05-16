@@ -1,7 +1,7 @@
-const isAndroidMobile = require('../is_android_mobile')
-const isIphone = require('../is_iphone')
-const isWindowsPhone = require('../is_windows_phone')
-const isBlackberry = require('../is_blackberry')
+var isAndroidMobile = require('../is_android_mobile')
+var isIphone = require('../is_iphone')
+var isWindowsPhone = require('../is_windows_phone')
+var isBlackberry = require('../is_blackberry')
 
 module.exports = function isMobile (str) {
   return isAndroidMobile(str) ||

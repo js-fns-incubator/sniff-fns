@@ -1,4 +1,4 @@
-const whichBrowser = require('../which_browser')
+var whichBrowser = require('../which_browser')
 
 module.exports = function whichBrowserVersion (str) {
   var capturedVersion

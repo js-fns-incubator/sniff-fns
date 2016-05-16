@@ -8,7 +8,13 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [Semantic Versioning]: http://semver.org/
 [Keep a CHANGELOG]: http://keepachangelog.com/
 
-## [Unreleased]
+## [0.5.1] - 2016-05-16
+
+### Fixed
+
+- Replace `const` with `var` to keep compatibility with old browsers.
+
+## [0.5.0] - 2016-05-11
 
 ### Changed
 

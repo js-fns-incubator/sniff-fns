@@ -1,9 +1,9 @@
-const isAndroid = require('../is_android')
-const isBlackberry = require('../is_blackberry')
-const isIphone = require('../is_iphone')
-const isMac = require('../is_mac')
-const isWindows = require('../is_windows')
-const isWindowsPhone = require('../is_windows_phone')
+var isAndroid = require('../is_android')
+var isBlackberry = require('../is_blackberry')
+var isIphone = require('../is_iphone')
+var isMac = require('../is_mac')
+var isWindows = require('../is_windows')
+var isWindowsPhone = require('../is_windows_phone')
 
 module.exports = function whichOS (str) {
   if (isAndroid(str)) {
