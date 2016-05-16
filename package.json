@@ -1,6 +1,6 @@
 {
   "name": "sniff-fns",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "Ivan Shornikov <paraboom@gmail.com>",
   "license": "MIT",
   "description": "Browser agent sniffing functions",
