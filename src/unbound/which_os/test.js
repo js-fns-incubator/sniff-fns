@@ -71,6 +71,16 @@ test('whichOS detects "windows mobile"', (t) => {
   })
 })
 
+test('whichOS detects "linux"', (t) => {
+  ;[
+    'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:24.0) Gecko/20100101 Firefox/24.0',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.32 (KHTML, like Gecko) Chromium/25.0.1349.2 Chrome/25.0.1349.2 Safari/537.32 Epiphany/3.8.2',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1636.0 Safari/537.36'
+  ].forEach((ua) => {
+    t.is(whichOS(ua), 'linux')
+  })
+})
+
 test("whichOS returns if OS can't be detected", (t) => {
   t.is(whichOS('wutOS'), undefined)
 })
