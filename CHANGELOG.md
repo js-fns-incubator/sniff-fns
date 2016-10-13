@@ -8,6 +8,9 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [Semantic Versioning]: http://semver.org/
 [Keep a CHANGELOG]: http://keepachangelog.com/
 
+## Unreleased
+- Add `isLinux` function to `whichOs` to support Linux OS detection
+
 ## [0.5.2] - 2016-05-16
 
 ### Fixed
