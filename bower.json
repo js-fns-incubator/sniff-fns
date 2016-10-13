@@ -1,6 +1,6 @@
 {
   "name": "sniff-fns",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "homepage": "https://github.com/js-fns/sniff-fns",
   "authors": ["Ivan Shornikov <paraboom@gmail.com>"],
   "description": "Browser agent sniffing functions",

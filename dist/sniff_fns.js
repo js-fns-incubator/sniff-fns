@@ -549,6 +549,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var isBlackberry = __webpack_require__(6)
 	var isIphone = __webpack_require__(20)
 	var isMac = __webpack_require__(24)
+	var isLinux = __webpack_require__(22)
 	var isWindows = __webpack_require__(33)
 	var isWindowsPhone = __webpack_require__(27)
 
@@ -561,6 +562,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return 'iphone'
 	  } else if (isWindowsPhone(str)) {
 	    return 'windows mobile'
+	  } else if (isLinux(str)) {
+	    return 'linux'
 	  } else if (isMac(str)) {
 	    return 'mac'
 	  } else if (isWindows(str)) {
