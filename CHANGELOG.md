@@ -8,6 +8,18 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [Semantic Versioning]: http://semver.org/
 [Keep a CHANGELOG]: http://keepachangelog.com/
 
+## Unreleased
+
+### Added
+
+- Add `which_linux_distro` function to detect Linux distributions 
+  Supported Distros: Centos, Debian, Fedora, Gentoo, Red hat, Ubuntu
+  
+- Add `which_linux_distro` to extend `which_os` function
+  
+- Add individual function to check for distributions as a standalone manner
+  
+
 ## [0.5.3] - 2016-10-14
 
 ### Added

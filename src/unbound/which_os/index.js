@@ -5,6 +5,7 @@ var isMac = require('../is_mac')
 var isLinux = require('../is_linux')
 var isWindows = require('../is_windows')
 var isWindowsPhone = require('../is_windows_phone')
+var whichLinuxDistro = require('../which_linux_distro')
 
 module.exports = function whichOS (str) {
   if (isAndroid(str)) {
@@ -16,7 +17,7 @@ module.exports = function whichOS (str) {
   } else if (isWindowsPhone(str)) {
     return 'windows mobile'
   } else if (isLinux(str)) {
-    return 'linux'
+    return whichLinuxDistro(str)
   } else if (isMac(str)) {
     return 'mac'
   } else if (isWindows(str)) {
