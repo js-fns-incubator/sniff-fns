@@ -51,6 +51,13 @@ test('whichBrowser detects "safari"', (t) => {
   })
 })
 
+test('whichBrowser detects "edge"', (t) => {
+  ;[
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246',
+    'Mozilla/5.0 (X11; CrOS x86_64 6783.1.0) AppleWebKit/537.36 (KHTML, like Gecko) Edge/12.0'
+  ].forEach((ua) => t.is(whichBrowser(ua), 'edge'))
+})
+
 test("whichBrowser returns undefined if a browser can't be detected", (t) => {
   ;[
     'Mozilla/5.0 (Windows; U; Windows CE 5.2; en-US; rv:1.9.2a1pre) Gecko/20090210 Fennec/0.11'
